@@ -3,10 +3,18 @@ Name;Bernd Günther
 BLZ;20010020
 Kontonummer;0305361201
 IBAN;DE95200100200305361201
-Aktueller Kontostand;9.427,95 €
+Aktueller Kontostand;9.173,78 €
 Summe vorgemerkter Umsätze;0,00 €
 
 "Buchungstag";"Wertstellung";"Umsatzart";"Buchungsdetails";"Auftraggeber";"Empfänger";"Betrag (€)";"Saldo (€)"
+"05.10.2017";"05.10.2017";"Kartenzahlung";"Referenz 54502716347851041017165447 Mandat OFFLINE Einreicher-ID DE41ZZZ00000501788 13 EDEKA STRUVE SAGT DANKE//HAMBURG /DE Terminal 54502716 2017-10-04T16:54:47 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"13 EDEKA STRUVE SAGT DANKE";"-26,03 €";"9.173,78 €"
+"04.10.2017";"04.10.2017";"Kartenzahlung";"Referenz 54351784275377021017094705 Mandat 263394 Einreicher-ID DE56ZZZ00000336133 HAYUNGAS KOFURTH GMBH//NORDERSTEDT/ DE Terminal 54351784 2017-10-02T09:47:05 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"HAYUNGAS KOFURTH GMBH";"-66,00 €";"9.199,81 €"
+"04.10.2017";"04.10.2017";"Kartenzahlung";"Referenz 54351781271395021017134829 Mandat OFFLINE Einreicher-ID DE56ZZZ00000336133 HAYUNGAS KOFURTH GMBH//NORDERSTEDT/ DE Terminal 54351781 2017-10-02T13:48:29 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"HAYUNGAS KOFURTH GMBH";"-33,99 €";"9.265,81 €"
+"04.10.2017";"04.10.2017";"Kartenzahlung";"Referenz 54351786192015021017100651 Mandat OFFLINE Einreicher-ID DE56ZZZ00000336133 HAYUNGAS KOFURTH GMBH//NORDERSTEDT/ DE Terminal 54351786 2017-10-02T10:06:51 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"HAYUNGAS KOFURTH GMBH";"-41,09 €";"9.299,80 €"
+"04.10.2017";"04.10.2017";"Lastschrift";"Referenz 003982528719 Mandat 0020007186599 Einreicher-ID DE74ZZZ00000045294 KD-Nr. K524810090/ RG-Nr. 100041306 343 ";"Bernd Günther";"1u1 Internet SE";"-4,99 €";"9.340,89 €"
+"04.10.2017";"04.10.2017";"Kartenzahlung";"Referenz 54408683266373021017101328 Mandat OFFLINE Einreicher-ID DE41ZZZ00001601186 ALDI SAGT DANKE 16 056//Norderstedt /DE Terminal 54408683 2017-10-02T10:13:28 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"ALDI GmbH + Co. KG BARGTEHEIDE";"-18,37 €";"9.345,88 €"
+"02.10.2017";"02.10.2017";"Lastschrift";"Referenz 2482646176 Mandat 14716846-01-2 Einreicher-ID DE68ZZZ00000140462 ABSCHLAG Gas 10/17 VK: 14716846 gru engas classic ";"Bernd Günther";"gas.de Versorgungsgesellschaft mbH";"-58,00 €";"9.364,25 €"
+"29.09.2017";"30.09.2017";"Zinsen/Entgelt";"";"Bernd Günther";"";"-5,70 €";"9.422,25 €"
 "29.09.2017";"29.09.2017";"Lastschrift";"Referenz WILHELM.TEL-314-520890000 Mandat WTG00000000000078545 Einreicher-ID DE91ZZZ00000124528 KD. NR. 1024683 RE 2170742679 V.14. 09.17 EUR 41,50 ";"Bernd Günther";"wilhelm.tel GmbH";"-41,50 €";"9.427,95 €"
 "29.09.2017";"29.09.2017";"Lastschrift";"Referenz LS0310000785866 Mandat N01D20781221299 Einreicher-ID DE10ZZZ00000113182 ABRUF FUER SEPTEMBER 2017 KD 207812 Bernd Guenther Weissdornweg 36 228 46 Norderstedt ";"Bernd Günther";"Stadtwerke Norderstedt";"-29,00 €";"9.469,45 €"
 "28.09.2017";"28.09.2017";"Lastschrift";"Referenz 1132586411349573 Mandat iXIK7TM1Vwmmyp-epi1gN70Z+FNE A4 Einreicher-ID DE24ZZZ00000561652 306-3657270-7495558 Amazon.de 11325 86411349573 ";"Bernd Günther";"AMAZON EU S.A R.L., NIEDERLASSUNG DEUTSCHLAND";"-21,49 €";"9.498,45 €"

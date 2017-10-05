@@ -19,10 +19,18 @@ from umsaetze where institut = 'DKB'
 GROUP BY wertstellungstag
 ORDER BY wertstellungstag;
 
+SELECT to_char(datum, 'YYYYMM'), sum(kontostand)
+  FROM finanzstatus
+  GROUP BY to_char(datum, 'YYYYMM')
+  ORDER BY 1;
+
+SELECT *
+FROM finanzstatus;
+
 create or REPLACE view umsatz_uebersicht as
-(select to_char(wertstellungstag, 'YYYYMM') "monat",
-  case
-    when lower(buchungsdetails) like '%edeka%'
+  (select to_char(wertstellungstag, 'YYYYMM') "monat",
+        case
+        when lower(buchungsdetails) like '%edeka%'
       or lower(buchungsdetails) like '%e-center%'
       or lower(buchungsdetails) like '%lidl%'
       or lower(buchungsdetails) like '%aldi%'
@@ -80,3 +88,5 @@ GROUP BY to_char(wertstellungstag, 'YYYYMM')
 order by to_char(wertstellungstag, 'YYYYMM');
 
 SELECT * from umsaetze_monthly;
+
+ALTER TABLE public.finanzstatus ALTER COLUMN kontostand TYPE NUMERIC USING kontostand::NUMERIC;
