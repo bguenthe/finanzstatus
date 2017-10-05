@@ -1,0 +1,22 @@
+"Kontonummer:";"DE02120300001053355689 / Girokonto";
+
+"Von:";"02.01.2017";
+"Bis:";"05.10.2017";
+"Kontostand vom:";"114,81";
+
+"Buchungstag";"Wertstellung";"Buchungstext";"Auftraggeber / Begünstigter";"Verwendungszweck";"Kontonummer";"BLZ";"Betrag (EUR)";"Gläubiger-ID";"Mandatsreferenz";"Kundenreferenz";
+"02.10.2017";"01.10.2017";"Abschluss";"";"Abrechnung 29.09.2017      siehe Anlage<br />Abrechnung 29.09.2017<br />Information zur Abrechnung<br />Kontostand am 29.09.2017                                          114,81 +<br />Abrechnungszeitraum vom 01.07.2017 bis 30.09.2017<br />Abrechnung 30.09.2017                                                0,00+<br />Sollzinssätze am 30.09.2017<br /> 6,9000 v.H. für Dispositionskredit<br />(aktuelle Kreditlinie         500,00)<br /> 6,9000 v.H. für Kontoüberziehungen<br />über die Kreditlinie hinaus<br />Kontostand/Rechnungsabschluss am 29.09.2017                       114,81 +<br />Rechnungsnummer: 20171002-BY111-00040990563";"1053355689";"12030000";"0,00";"";"";"";
+"24.08.2017";"24.08.2017";"Umbuchung";"DEUTSCHE KREDITBANK AG";"ERSTATTUNG AUSLANDSEINSATZENTGELT FUER VISA 4748 XXXX XXXX 5959";"9003932309";"12030000";"2,63";"";"";"";
+"24.07.2017";"24.07.2017";"Umbuchung";"DEUTSCHE KREDITBANK AG";"ERSTATTUNG AUSLANDSEINSATZENTGELT FUER VISA 4748 XXXX XXXX 5959";"9003932309";"12030000";"19,97";"";"";"";
+"03.07.2017";"01.07.2017";"Abschluss";"";"Abrechnung 30.06.2017      siehe Anlage<br />Abrechnung 30.06.2017<br />Information zur Abrechnung<br />Kontostand am 30.06.2017                                           92,21 +<br />Abrechnungszeitraum vom 01.04.2017 bis 30.06.2017<br />Abrechnung 30.06.2017                                                0,00+<br />Sollzinssätze am 30.06.2017<br /> 6,9000 v.H. für Dispositionskredit<br />(aktuelle Kreditlinie         500,00)<br /> 6,9000 v.H. für Kontoüberziehungen<br />über die Kreditlinie hinaus<br />Kontostand/Rechnungsabschluss am 30.06.2017                        92,21 +<br />Rechnungsnummer: 20170703-BY111-00037437732";"1053355689";"12030000";"0,00";"";"";"";
+"26.06.2017";"26.06.2017";"Umbuchung";"DEUTSCHE KREDITBANK AG";"ERSTATTUNG AUSLANDSEINSATZENTGELT FUER VISA 4748 XXXX XXXX 5959";"9003932309";"12030000";"17,39";"";"";"";
+"24.05.2017";"24.05.2017";"Umbuchung";"DEUTSCHE KREDITBANK AG";"ERSTATTUNG AUSLANDSEINSATZENTGELT FUER VISA 4748 XXXX XXXX 5959";"9003932309";"12030000";"16,16";"";"";"";
+"08.05.2017";"06.05.2017";"Auftrag";"KREDITKARTEN GELDANLAGE";"4748430032755959 BERND GUENTHER";"1999333";"12030000";"-14.000,00";"";"";"";
+"27.04.2017";"27.04.2017";"Kartenzahlung/-abrechnung";"KREDITKARTENABRECHNUNG";"VISA-ABR. 4748430032755959";"9003290294";"12030000";"-469,30";"";"";"";
+"25.04.2017";"25.04.2017";"Gutschrift";"Bernd Gunther";"Kanada2017";"DE95200100200305361201";"PBNKDEFFXXX";"2.000,00";"";"";"ZV0100222548275400000002";
+"21.04.2017";"21.04.2017";"Gutschrift";"Claudia Stübe";"Umbuchung abzgl Bargeld EURO 200";"DE26200505501484528789";"HASPDEHHXXX";"6.800,00";"";"";"NOTPROVIDED";
+"03.04.2017";"01.04.2017";"Abschluss";"";"Abrechnung 31.03.2017      siehe Anlage<br />Abrechnung 31.03.2017<br />Information zur Abrechnung<br />Kontostand am 31.03.2017                                        5.727,96 +<br />Abrechnungszeitraum vom 19.01.2017 bis 31.03.2017<br />Abrechnung 31.03.2017                                                0,00+<br />Sollzinssätze am 30.03.2017<br /> 6,9000 v.H. für Dispositionskredit<br />(aktuelle Kreditlinie         500,00)<br /> 6,9000 v.H. für Kontoüberziehungen<br />über die Kreditlinie hinaus<br />Kontostand/Rechnungsabschluss am 31.03.2017                     5.727,96 +<br />Rechnungsnummer: 20170403-BY111-00034287571";"1053355689";"12030000";"0,00";"";"";"";
+"28.03.2017";"28.03.2017";"Kartenzahlung/-abrechnung";"KREDITKARTENABRECHNUNG";"VISA-ABR. 4748430032755959";"9003290294";"12030000";"-72,04";"";"";"";
+"21.03.2017";"21.03.2017";"Gutschrift";"Bernd Gunther";"Kanada2017";"DE95200100200305361201";"PBNKDEFFXXX";"5.000,00";"";"";"ZV0100220612941600000002";
+"28.02.2017";"28.02.2017";"Kartenzahlung/-abrechnung";"KREDITKARTENABRECHNUNG";"VISA-ABR. 4748430032755959";"9003290294";"12030000";"-200,00";"";"";"";
+"31.01.2017";"31.01.2017";"Gutschrift";"Bernd Gunther";"Startguthaben";"DE95200100200305361201";"PBNKDEFFXXX";"1.000,00";"";"";"ZV0100217475031600000002";
