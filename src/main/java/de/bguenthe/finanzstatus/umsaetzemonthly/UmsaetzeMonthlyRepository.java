@@ -1,4 +1,4 @@
-package de.bguenthe.finanzstatus;
+package de.bguenthe.finanzstatus.umsaetzemonthly;
 
 import java.io.Serializable;
 import org.springframework.data.repository.CrudRepository;

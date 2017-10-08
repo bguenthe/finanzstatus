@@ -1,4 +1,4 @@
-package de.bguenthe.finanzstatus;
+package de.bguenthe.finanzstatus.umsaetzemonthly;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package de.bguenthe.finanzstatus;
+package de.bguenthe.finanzstatus.umsaetzemonthly;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

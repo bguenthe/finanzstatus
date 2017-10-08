@@ -56,6 +56,7 @@ create OR REPLACE VIEW finanzstatus_monthly as
   GROUP BY to_char(datum, 'YYYYMM')
   order by to_char(datum, 'YYYYMM');
 
+create or replace VIEW finanzstatus_monthly as (
 select row_number() over() as id, monat, vermoegen from (
 WITH maxdate (institut, typ, maxtimestamp) AS
 (SELECT
@@ -70,7 +71,10 @@ FROM finanzstatus
   JOIN maxdate ON finanzstatus.timestampinserted = maxdate.maxtimestamp AND finanzstatus.institut = maxdate.institut AND
                   finanzstatus.typ = maxdate.typ
 GROUP BY 1
-ORDER BY 1) a;
+ORDER BY 1) a);
+
+select * from finanzstatus_monthly;
+
 
 select
   row_number() over() as id,
