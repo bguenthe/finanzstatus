@@ -58,6 +58,11 @@ create OR REPLACE VIEW finanzstatus_monthly as
 
 create or replace VIEW finanzstatus_monthly as (
 select row_number() over() as id, monat, vermoegen from (
+WITH allmonths (month) as (
+  SELECT to_char(datum, 'YYYYMM')
+  FROM finanzstatus
+  GROUP BY to_char(datum, 'YYYYMM')
+),
 WITH maxdate (institut, typ, maxtimestamp) AS
 (SELECT
    institut,
@@ -96,3 +101,34 @@ from finanzstatus
 GROUP BY 1, 2
 
 select * from  finanzstatus_monthly;
+
+
+WITH allmonths (month) as (
+    SELECT to_char(datum, 'YYYYMM')
+    FROM finanzstatus
+    GROUP BY to_char(datum, 'YYYYMM')
+)
+SELECT * from allmonths
+
+WITH allmonths (month) as (
+    SELECT to_char(datum, 'YYYYMM')
+    FROM finanzstatus
+    GROUP BY to_char(datum, 'YYYYMM')
+    ),
+    maxdate (institut, typ, maxtimestamp) AS
+    (SELECT
+     institut,
+     typ,
+     max(timestampinserted)
+    FROM finanzstatus join allmonths on to_char(finanzstatus.datum, 'YYYYMM') <= allmonths.month
+    GROUP BY 1, 2)
+    SELECT to_char(datum, 'YYYYMM') "monat",
+                                    sum(kontostand) as vermoegen
+                                                    FROM finanzstatus
+                                                    JOIN maxdate ON finanzstatus.timestampinserted = maxdate.maxtimestamp AND finanzstatus.institut = maxdate.institut AND
+                                                                                                                                                             finanzstatus.typ = maxdate.typ
+           GROUP BY 1
+           ORDER BY 1;
+
+
+create table bg_finanzstatus_save as (SELECT * FROM finanzstatus)

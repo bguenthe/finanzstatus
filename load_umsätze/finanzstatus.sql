@@ -90,3 +90,7 @@ order by to_char(wertstellungstag, 'YYYYMM');
 SELECT * from umsaetze_monthly;
 
 ALTER TABLE public.finanzstatus ALTER COLUMN kontostand TYPE NUMERIC USING kontostand::NUMERIC;
+
+
+WITH
+select to_char(datum, 'YYYYMM') from finanzstatus GROUP BY to_char(datum, 'YYYYMM');
