@@ -3,10 +3,23 @@ Name;Bernd Günther
 BLZ;20010020
 Kontonummer;0305361201
 IBAN;DE95200100200305361201
-Aktueller Kontostand;9.173,78 €
+Aktueller Kontostand;10.241,15 €
 Summe vorgemerkter Umsätze;0,00 €
 
 "Buchungstag";"Wertstellung";"Umsatzart";"Buchungsdetails";"Auftraggeber";"Empfänger";"Betrag (€)";"Saldo (€)"
+"27.10.2017";"27.10.2017";"Kartenzahlung";"Referenz 68192990903063231017082346 Mandat OFFLINE Einreicher-ID DE44ZZZ00001816763 BOARDINGHOUSE HOME GMBH//KONSTANZ/D E Terminal 68192990 2017-10-23T08:23:46 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"Lastschrift aus Kartenzahlung";"-72,40 €";"10.241,15 €"
+"26.10.2017";"26.10.2017";"Gehalt/Rente";"Referenz NOTPROVIDED Verwendungszweck Bezuege ";"Otto (GmbH Co KG)";"Bernd Günther";"2.494,00 €";"10.313,55 €"
+"26.10.2017";"26.10.2017";"Kartenzahlung";"Referenz 59083856027964251017155611 Mandat OFFLINE Einreicher-ID DE39DBV00000002177 DB AUTOMAT//LANGENARGEN/DE Terminal 59083856 2017-10-25T15:56:11 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"DB Vertrieb GmbH";"-4,00 €";"7.819,55 €"
+"20.10.2017";"20.10.2017";"Auszahlung Geldautomat";"Referenz 00002267375103191017134048 Mandat 924324 Einreicher-ID DE3813500000020140 COMMERZBANK-AG/NORDERS/NORDERSTEDT/ DE Terminal 00002267 2017-10-19T13:40:48 Folgenr. 002 Verfalld. 1812 ";"Bernd Günther";"COMMERZBANK AG";"-1.000,00 €";"7.823,55 €"
+"18.10.2017";"18.10.2017";"Lastschrift";"Referenz 1001859698098 PP.5742.PP P AYPAL Mandat 4DQ2224NH9DQG Einreicher-ID LU96ZZZ00000000000000 00058 PP.5742.PP . DBVERTRIEBG, Ihr Einka uf bei DBVERTRIEBG ";"Bernd Günther";"PayPal Europe S.a.r.l. et Cie S.C.A";"-106,40 €";"8.823,55 €"
+"16.10.2017";"16.10.2017";"Kartenzahlung";"Referenz 54351784276416131017175339 Mandat OFFLINE Einreicher-ID DE56ZZZ00000336133 HAYUNGAS KOFURTH GMBH//NORDERSTEDT/ DE Terminal 54351784 2017-10-13T17:53:39 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"HAYUNGAS KOFURTH GMBH";"-1,20 €";"8.929,95 €"
+"16.10.2017";"16.10.2017";"Lastschrift";"Referenz 022003781475 Mandat 000000017875 Einreicher-ID DE91ZZZ00000002114 HAMBURG ENERGIE, AB OKTOBER, VK 801 2022218, Weissdornweg 36, Norderste dt ";"Bernd Günther";"HAMBURG ENERGIE GmbH";"-68,00 €";"8.931,15 €"
+"12.10.2017";"12.10.2017";"Lastschrift";"Referenz YYIJ22222BEXCVBL PP.5742.P P PAYPAL Mandat 4DQ2224NH9DQG Einreicher-ID LU96ZZZ00000000000000 00058 PP.5742.PP . SPOTIFY, Ihr Einkauf b ei SPOTIFY ";"Bernd Günther";"PayPal Europe S.a.r.l. et Cie S.C.A";"-1,51 €";"8.999,15 €"
+"11.10.2017";"11.10.2017";"Kartenzahlung";"Referenz 69530782037260101017203456 Mandat 112139 Einreicher-ID DE22ZZZ00001792909 Alexandros Restaurant//Hamburg/DE Terminal 69530782 2017-10-10T20:34:56 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"Alexandros Restaurant";"-30,00 €";"9.000,66 €"
+"10.10.2017";"10.10.2017";"Lastschrift";"Referenz 1504790197198886 Mandat iXIK7TM1Vwmmyp-epi1gN70Z+FNE A4 Einreicher-ID DE24ZZZ00000561652 302-4393462-3265108 Amazon.de 15047 90197198886 ";"Bernd Günther";"AMAZON EU S.A R.L., NIEDERLASSUNG DEUTSCHLAND";"-17,72 €";"9.030,66 €"
+"10.10.2017";"10.10.2017";"Lastschrift";"Referenz NOTPROVIDED Mandat 78019E1A704A048A1658871B61C Einreicher-ID DE40ZZZ00000206926 M0581251 U204655750 B262437039 smar tmobil.de Rg ";"Bernd Günther";"Drillisch Online AG";"-19,95 €";"9.048,38 €"
+"09.10.2017";"09.10.2017";"Lastschrift";"Referenz 1298483198472251 Mandat iXIK7TM1Vwmmyp-epi1gN70Z+FNE A4 Einreicher-ID DE94ZZZ00000561653 302-9749564-1953144 Amazon .Mktplce EU-DE 1298483198472251 ";"Bernd Günther";"AMAZON PAYMENTS EUROPE S.C.A.";"-55,50 €";"9.068,33 €"
+"09.10.2017";"09.10.2017";"Überweisung";"376866/DE85300600100000021573 1715074496153107 Eventbrite Eventbr ite ";"Bernd Günther";"Adyen Client Mgt Foundation";"-49,95 €";"9.123,83 €"
 "05.10.2017";"05.10.2017";"Kartenzahlung";"Referenz 54502716347851041017165447 Mandat OFFLINE Einreicher-ID DE41ZZZ00000501788 13 EDEKA STRUVE SAGT DANKE//HAMBURG /DE Terminal 54502716 2017-10-04T16:54:47 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"13 EDEKA STRUVE SAGT DANKE";"-26,03 €";"9.173,78 €"
 "04.10.2017";"04.10.2017";"Kartenzahlung";"Referenz 54351784275377021017094705 Mandat 263394 Einreicher-ID DE56ZZZ00000336133 HAYUNGAS KOFURTH GMBH//NORDERSTEDT/ DE Terminal 54351784 2017-10-02T09:47:05 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"HAYUNGAS KOFURTH GMBH";"-66,00 €";"9.199,81 €"
 "04.10.2017";"04.10.2017";"Kartenzahlung";"Referenz 54351781271395021017134829 Mandat OFFLINE Einreicher-ID DE56ZZZ00000336133 HAYUNGAS KOFURTH GMBH//NORDERSTEDT/ DE Terminal 54351781 2017-10-02T13:48:29 Folgenr. 02 Verfalld. 1812 ";"Bernd Günther";"HAYUNGAS KOFURTH GMBH";"-33,99 €";"9.265,81 €"
@@ -73,14 +86,3 @@ Summe vorgemerkter Umsätze;0,00 €
 "31.07.2017";"31.07.2017";"Lastschrift";"Referenz LS0310000711914 Mandat N01D20781221299 Einreicher-ID DE10ZZZ00000113182 ABRUF FUER JULI 2017 KD 207812 Bern d Guenther Weissdornweg 36 22846 No rderstedt ";"Bernd Günther";"Stadtwerke Norderstedt";"-29,00 €";"6.319,57 €"
 "31.07.2017";"31.07.2017";"Lastschrift";"Referenz WILHELM.TEL-312-525820000 Mandat WTG00000000000078545 Einreicher-ID DE91ZZZ00000124528 KD. NR. 1024683 RE 2170531757 V.13. 07.17 EUR 40,90 ";"Bernd Günther";"wilhelm.tel GmbH";"-40,90 €";"6.348,57 €"
 "27.07.2017";"27.07.2017";"Gehalt/Rente";"Referenz NOTPROVIDED Verwendungszweck Bezuege ";"Otto (GmbH Co KG)";"Bernd Günther";"1.274,81 €";"6.389,47 €"
-"17.07.2017";"17.07.2017";"Lastschrift";"Referenz 022301606398 Mandat 000000017875 Einreicher-ID DE91ZZZ00000002114 HAMBURG ENERGIE, AB JULI, VK 801202 2218, Weissdornweg 36, Norderstedt ";"Bernd Günther";"HAMBURG ENERGIE GmbH";"-68,00 €";"5.114,66 €"
-"12.07.2017";"12.07.2017";"Lastschrift";"Referenz 1001353473901 PP.5742.PP P AYPAL Mandat 4DQ2224NH9DQG Einreicher-ID LU96ZZZ00000000000000 00058 PP.5742.PP . SPOTIFY, Ihr Einkauf b ei SPOTIFY ";"Bernd Günther";"PayPal Europe S.a.r.l. et Cie S.C.A";"-9,99 €";"5.182,66 €"
-"10.07.2017";"10.07.2017";"Lastschrift";"Referenz NOTPROVIDED Mandat 78019E1A704A048A1658871B61C Einreicher-ID DE40ZZZ00000206926 M0581251 U193991930 B250239422 smar tmobil.de Rg ";"Bernd Günther";"Drillisch Online AG";"-91,14 €";"5.192,65 €"
-"06.07.2017";"06.07.2017";"Lastschrift";"Referenz 1001322840146 PP.5742.PP P AYPAL Mandat 4DQ2224NH9DQG Einreicher-ID LU96ZZZ00000000000000 00058 PP.5742.PP . ADOBESYSTEM, Ihr Einka uf bei ADOBESYSTEM ";"Bernd Günther";"PayPal Europe S.a.r.l. et Cie S.C.A";"-11,89 €";"5.283,79 €"
-"04.07.2017";"04.07.2017";"Lastschrift";"Referenz 1001303030773 PP.5742.PP P AYPAL Mandat 4DQ2224NH9DQG Einreicher-ID LU96ZZZ00000000000000 00058 PP.5742.PP . AIRBNB, Ihr Einkauf be i AIRBNB ";"Bernd Günther";"PayPal Europe S.a.r.l. et Cie S.C.A";"-145,98 €";"5.295,68 €"
-"04.07.2017";"04.07.2017";"Lastschrift";"Referenz 004231577198 Mandat 0020007186599 Einreicher-ID DE74ZZZ00000045294 KD-Nr. K524810090/ RG-Nr. 100038758 852 ";"Bernd Günther";"1u1 Internet SE";"-4,99 €";"5.441,66 €"
-"03.07.2017";"03.07.2017";"Lastschrift";"Referenz 2422118612 Mandat 14716846-01-2 Einreicher-ID DE68ZZZ00000140462 ABSCHLAG Gas 07/17 VK: 14716846 gru engas classic ";"Bernd Günther";"gas.de Versorgungsgesellschaft mbH";"-58,00 €";"5.446,65 €"
-"30.06.2017";"30.06.2017";"Zinsen/Entgelt";"";"Bernd Günther";"";"-5,70 €";"5.504,65 €"
-"30.06.2017";"30.06.2017";"Lastschrift";"Referenz WILHELM.TEL-310-531810000 Mandat WTG00000000000078545 Einreicher-ID DE91ZZZ00000124528 KD. NR. 1024683 RE 2170427897 V.15. 06.17 EUR 40,90 ";"Bernd Günther";"wilhelm.tel GmbH";"-40,90 €";"5.510,35 €"
-"30.06.2017";"30.06.2017";"Lastschrift";"Referenz LS0310000677361 Mandat N01D20781221299 Einreicher-ID DE10ZZZ00000113182 ABRUF FUER JUNI 2017 KD 207812 Bern d Guenther Weissdornweg 36 22846 No rderstedt ";"Bernd Günther";"Stadtwerke Norderstedt";"-29,00 €";"5.551,25 €"
-"28.06.2017";"28.06.2017";"Gehalt/Rente";"Referenz NOTPROVIDED Verwendungszweck Bezuege ";"Otto (GmbH Co KG)";"Bernd Günther";"1.274,81 €";"5.580,25 €"

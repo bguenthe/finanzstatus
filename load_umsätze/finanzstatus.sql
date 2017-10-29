@@ -1,3 +1,16 @@
+/* vorbereitenb neuer monat */
+insert into finanzstatus (institut, kontostand, datum, typ)
+  select institut, kontostand, to_date(to_char(now(),'DDMMYYYY'),'DDMMYYYY'), typ FROM
+    (select institut, kontostand, max(datum), typ
+     FROM finanzstatus
+     GROUP BY 1,2,4) a;
+
+insert into finanzstatus (institut, kontostand, datum, typ)
+  select institut, kontostand, to_date('01102017','DDMMYYYY'), typ FROM
+    (select institut, kontostand, max(datum), typ
+     FROM finanzstatus
+     GROUP BY 1,2,4) a;
+
 select
   sum(case when betrag > 0 THEN betrag END) "Einkuenfte",
   sum(case when betrag < 0 THEN betrag END) * -1 "Kosten"
@@ -19,14 +32,7 @@ from umsaetze where institut = 'DKB'
 GROUP BY wertstellungstag
 ORDER BY wertstellungstag;
 
-SELECT to_char(datum, 'YYYYMM'), sum(kontostand)
-  FROM finanzstatus
-  GROUP BY to_char(datum, 'YYYYMM')
-  ORDER BY 1;
-
-SELECT *
-FROM finanzstatus;
-
+/* VIEWS */
 create or REPLACE view umsatz_uebersicht as
   (select to_char(wertstellungstag, 'YYYYMM') "monat",
         case
@@ -40,8 +46,7 @@ create or REPLACE view umsatz_uebersicht as
       or lower(buchungsdetails) like '%rewe%'
     then 'LBM'
     when lower(buchungsdetails) like '%haspa%' and umsaetze.betrag < 0
-      or lower(buchungsdetails) like '%voba%' and umsaetze.betrag < 0
-      or lower(buchungsdetails) like '%commerzbank%' and umsaetze.betrag < 0
+      or lower(buchungsdetails) like '%voba%' and umsaetze.betrag < 0or lower(buchungsdetails) like '%commerzbank%' and umsaetze.betrag < 0
       or lower(buchungsdetails) like '%commerzbank%' and umsaetze.betrag < 0
     then 'Geld abheben'
     when lower(buchungsdetails) like '%verwendungszweck bezuege%'
@@ -65,18 +70,7 @@ ORDER BY 1,2);
 
 select * from umsatz_uebersicht;
 
-select * from umsaetze where lower(buchungsdetails) like '%abruf%' ORDER BY 2;
-
-select * from umsaetze where institut = 'DKB' order by wertstellungstag desc;
-
-select 'Postbank', count(*) from umsaetze where institut = 'Postbank'
-UNION
-select 'DKB', count(*) from umsaetze where institut = 'DKB';
-
-delete from umsaetze;
-
-delete from finanzstatus;
-
+/* Monatsauswertung Umsäetze */
 create OR REPLACE VIEW umsaetze_monthly as
 select
   row_number() over() as id,
@@ -89,4 +83,18 @@ order by to_char(wertstellungstag, 'YYYYMM');
 
 SELECT * from umsaetze_monthly;
 
-ALTER TABLE public.finanzstatus ALTER COLUMN kontostand TYPE NUMERIC USING kontostand::NUMERIC;
+create or replace VIEW finanzstatus_monthly as (
+  WITH summary AS (
+      SELECT p.id,
+        p.kontostand,
+        to_char(p.datum, 'YYYYMM') datum,
+        ROW_NUMBER() OVER(PARTITION BY p.institut, p.typ, to_char(p.datum, 'YYYYMM')
+          ORDER BY p.timestampinserted DESC) AS rk
+      FROM  finanzstatus p)
+  SELECT s.datum, sum(s.kontostand)
+  FROM summary s
+  WHERE s.rk = 1
+  GROUP BY s.datum
+  ORDER BY s.datum);
+
+select * from finanzstatus_monthly;
