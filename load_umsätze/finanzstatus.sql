@@ -11,6 +11,8 @@ insert into finanzstatus (institut, kontostand, datum, typ)
      FROM finanzstatus
      GROUP BY 1,2,4) a;
 
+select * from finanzstatus order by datum;
+
 select
   sum(case when betrag > 0 THEN betrag END) "Einkuenfte",
   sum(case when betrag < 0 THEN betrag END) * -1 "Kosten"
@@ -73,7 +75,7 @@ select * from umsatz_uebersicht;
 /* Monatsauswertung Umsäetze */
 create OR REPLACE VIEW umsaetze_monthly as
 select
-  row_number() over() as id,
+  row_number() over() as id, -- für SPRING
   to_char(wertstellungstag, 'YYYYMM') "monat",
   sum(case when betrag > 0 THEN betrag END) "einkuenfte",
   sum(case when betrag < 0 THEN betrag END) * -1 "kosten"
@@ -86,15 +88,20 @@ SELECT * from umsaetze_monthly;
 create or replace VIEW finanzstatus_monthly as (
   WITH summary AS (
       SELECT p.id,
-        p.kontostand,
-        to_char(p.datum, 'YYYYMM') datum,
+        p.kontostand as kontostand,
+        to_char(p.datum, 'YYYYMM') as monat,
         ROW_NUMBER() OVER(PARTITION BY p.institut, p.typ, to_char(p.datum, 'YYYYMM')
           ORDER BY p.timestampinserted DESC) AS rk
       FROM  finanzstatus p)
-  SELECT s.datum, sum(s.kontostand)
+  SELECT
+    row_number() over() as id,
+    s.monat,
+    sum(s.kontostand) as vermoegen
   FROM summary s
   WHERE s.rk = 1
-  GROUP BY s.datum
-  ORDER BY s.datum);
+  GROUP BY s.monat
+  ORDER BY s.monat);
+
+drop VIEW finanzstatus_monthly;
 
 select * from finanzstatus_monthly;
