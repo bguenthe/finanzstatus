@@ -1,5 +1,12 @@
-FROM don41382/rpi-python3-with-bluetooth
+FROM  resin/rpi-raspbian:stretch
 
-COPY
+# install Python 3
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-psycopg2 \
+    python3-bottle \
+    --no-install-recommends
 
-CMD java -jar finanzstatus-0.0.1-SNAPSHOT.jar
+COPY finanzstatus.py /
+
+CMD python3 /finanzstatus.py
