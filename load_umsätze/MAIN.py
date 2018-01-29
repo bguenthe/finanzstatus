@@ -14,4 +14,3 @@ loadDKBGiro.load_data()
 
 loadDKB = LoadDKB()
 loadDKB.load_data()
-

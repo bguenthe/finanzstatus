@@ -15,17 +15,17 @@ class Load:
 
         self.haspa_institut = "Haspa"
         self.haspa_typ = 'SparCard'
-        self.haspa_kontostand = float(34696.18)
+        self.haspa_kontostand = float(34718.08)
 
         self.Postbank_institut = "Postbank"
         self.Postbank_sparcard_typ = 'SparCard direkt'
-        self.Postbank_sparcard_kontostand = float(14.43)
+        self.Postbank_sparcard_kontostand = float(14.48)
 
         self.Postbank_sparcard_plus_typ = 'SparCard 3000 plus'
         self.Postbank_sparcard_plus_kontostand = float(2.01)
 
         self.Postbank_dax_typ = 'DAX Sparbuch'
-        self.Postbank_dax_kontostand = float(60.34)
+        self.Postbank_dax_kontostand = float(60.35)
 
 
     def get_curent_date(self):

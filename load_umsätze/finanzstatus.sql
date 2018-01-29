@@ -13,6 +13,7 @@ insert into finanzstatus (institut, kontostand, datum, typ)
 
 select * from finanzstatus order by datum;
 
+select * from umsaetze order by wertstellungstag;
 select
   sum(case when betrag > 0 THEN betrag END) "Einkuenfte",
   sum(case when betrag < 0 THEN betrag END) * -1 "Kosten"
@@ -27,11 +28,11 @@ GROUP BY to_char(wertstellungstag, 'YYYY_MM')
 order by to_char(wertstellungstag, 'YYYY_MM');
 
 
-select wertstellungstag,
+select institut, wertstellungstag,
   sum(case when betrag > 0 THEN betrag END) "Einkuenfte",
   sum(case when betrag < 0 THEN betrag END) * -1 "Kosten"
-from umsaetze where institut = 'DKB'
-GROUP BY wertstellungstag
+from umsaetze
+GROUP BY institut, wertstellungstag
 ORDER BY wertstellungstag;
 
 /* VIEWS */
@@ -63,6 +64,16 @@ create or REPLACE view umsatz_uebersicht as
     then 'Kontoführung'
     when lower(buchungsdetails) like '%aypal%' and not lower(buchungsdetails) like '%spotify%'
     then 'paypal'
+    when buchungsdetails like '%ABSCHLAG Gas%'
+    then 'Gas'
+    when buchungsdetails like '%HAMBURG ENERGIE%'
+    then 'Strom'
+    when buchungsdetails like '%WILHELM.TEL%'
+    then 'WILHELM.TEL'
+    when buchungsdetails like '%LS0310000899393%'
+    then 'Stadtwerke Abwasser'
+    when buchungsdetails like '%004182867288%'
+    then '1&1'
   else buchungsdetails END "Posten",
   sum(case when betrag > 0 THEN betrag END) "Einkuenfte",
   sum(case when betrag < 0 THEN betrag * -1 END) "Kosten"
