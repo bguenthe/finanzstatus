@@ -1,15 +1,24 @@
 "Kreditkarte:";"4748********5959 Kreditkarte";
 
-"Von:";"01.12.2017";
-"Bis:";"28.01.2018";
-"Saldo:";"1676.08 EUR";
-"Datum:";"25.01.2018";
+"Von:";"01.01.2018";
+"Bis:";"25.02.2018";
+"Saldo:";"1406.79 EUR";
+"Datum:";"22.02.2018";
 
 "Umsatz abgerechnet und nicht im Saldo enthalten";"Wertstellung";"Belegdatum";"Beschreibung";"Betrag (EUR)";"Ursprünglicher Betrag";
-"Nein";"26.01.2018";"25.01.2018";"REWE Ilsede Eichstr.Ilsede";"-10,29";"";
-"Nein";"23.01.2018";"22.01.2018";"ALLGAEUER VOLKSBANK EGBAHNHOFPL.";"-200,00";"";
+"Ja";"23.02.2018";"22.02.2018";"HabenzinsenZ 000000199 T 012   0000";"0,11";"";
+"Nein";"23.02.2018";"22.02.2018";"Abgeltungsteuer";"-0,03";"";
+"Ja";"20.02.2018";"19.02.2018";"*DEUTSCHE BANK AGNORDERSTED  >";"-200,00";"";
+"Ja";"20.02.2018";"19.02.2018";"EDEKA HAYUNGAS KOHFURTNORDERSTEDT";"-5,37";"";
+"Ja";"20.02.2018";"19.02.2018";"ALDI 16056NORDERSTEDT";"-2,69";"";
+"Ja";"19.02.2018";"17.02.2018";"EDEKA HAYUNGAS KOHFURTNORDERSTEDT";"-10,49";"";
+"Ja";"12.02.2018";"10.02.2018";"Famila-Warenhaus NorderstNorderstedt";"-12,67";"";
+"Ja";"12.02.2018";"10.02.2018";"EDEKA HAYUNGAS KOHFURTNORDERSTEDT";"-11,14";"";
+"Ja";"31.01.2018";"30.01.2018";"EDEKA HAYUNGAS KOHFURTNORDERSTEDT";"-16,75";"";
+"Ja";"26.01.2018";"25.01.2018";"REWE Ilsede Eichstr.Ilsede";"-10,29";"";
+"Ja";"23.01.2018";"22.01.2018";"ALLGAEUER VOLKSBANK EGBAHNHOFPL.";"-200,00";"";
 "Ja";"23.01.2018";"22.01.2018";"HabenzinsenZ 000000610 T 030   0000";"0,34";"";
-"Nein";"23.01.2018";"22.01.2018";"Abgeltungsteuer";"-0,09";"";
+"Ja";"23.01.2018";"22.01.2018";"Abgeltungsteuer";"-0,09";"";
 "Ja";"22.01.2018";"21.01.2018";"MPREIS FIL 8741RIEZLERN";"-11,01";"";
 "Ja";"17.01.2018";"16.01.2018";"43700 FENEB.RIEZLERNRIEZLERN";"-14,31";"";
 "Ja";"16.01.2018";"15.01.2018";"ITUNES.COM/BILLITUNES.COM";"-3,49";"";
@@ -18,13 +27,3 @@
 "Ja";"08.01.2018";"05.01.2018";"ITUNES.COM/BILLITUNES.COM";"-10,99";"";
 "Ja";"08.01.2018";"06.01.2018";"COMMERZBANK ATMNORDERSTED";"-200,00";"";
 "Ja";"05.01.2018";"04.01.2018";"EDEKA HAYUNGAS KOHFURTNORDERSTEDT";"-12,86";"";
-"Ja";"27.12.2017";"22.12.2017";"ALDI 16056NORDERSTEDT";"-8,66";"";
-"Ja";"27.12.2017";"22.12.2017";"EDEKA HAYUNGAS KOHFURTNORDERSTEDT";"-10,19";"";
-"Ja";"23.12.2017";"22.12.2017";"HabenzinsenZ 000000697 T 030   0000";"0,39";"";
-"Ja";"23.12.2017";"22.12.2017";"Abgeltungsteuer";"-0,10";"";
-"Ja";"21.12.2017";"20.12.2017";"EDEKA HAYUNGAS KOHFURTNORDERSTEDT";"-3,48";"";
-"Ja";"21.12.2017";"20.12.2017";"ALDI 16056NORDERSTEDT";"-4,36";"";
-"Ja";"11.12.2017";"08.12.2017";"COMMERZBANK ATMHAMBURG";"-200,00";"";
-"Ja";"11.12.2017";"09.12.2017";"ALDI 16056NORDERSTEDT";"-12,46";"";
-"Ja";"06.12.2017";"05.12.2017";"E-Center StruveHamburg";"-2,45";"";
-"Ja";"04.12.2017";"02.12.2017";"ALDI 16056NORDERSTEDT";"-12,92";"";

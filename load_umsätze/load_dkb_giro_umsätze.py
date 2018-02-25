@@ -26,7 +26,7 @@ class Load:
                 datum_und_kontostand.append(zeile.split(";"))
 
             datum = datum_und_kontostand[0][1][1:-1]
-            kontostand = float(locale.atof(datum_und_kontostand[1][1][1:-1]))
+            kontostand = float(locale.atof((datum_und_kontostand[1][1][1:-1]).replace(" EUR", "")))
 
             try:
                 self.cur.execute(
@@ -44,6 +44,7 @@ class Load:
                 print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (datum, kontostand))
             except Exception as e:
                 print(str(e))
+                raise(e)
 
             for zeile in umsätze[7:]:
                 # zu utf8 wandeln
@@ -74,9 +75,10 @@ class Load:
                         (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger,
                          betrag, saldo))
                     print(
-                        "Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, self.wertstellungstag))
+                        "Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, wertstellungstag))
                 except Exception as e:
                     print(str(e))
+                    raise(e)
 
         self.con.commit()
 

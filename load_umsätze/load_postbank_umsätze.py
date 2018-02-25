@@ -45,6 +45,7 @@ class Load:
                 print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (datum, kontostand))
             except Exception as e:
                 print(str(e))
+                raise(e)
 
             for zeile in umsätze[9:]:
                 # zu utf8 wandeln
@@ -71,9 +72,10 @@ class Load:
                     self.cur.execute(
                         "INSERT INTO umsaetze (institut, typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfaenger, betrag, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
                         (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger, betrag, saldo))
-                    print("Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, self.wertstellungstag))
+                    print("Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, wertstellungstag))
                 except Exception as e:
                     print(str(e))
+                    raise(e)
 
         self.con.commit()
 
