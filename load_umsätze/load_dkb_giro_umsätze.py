@@ -71,9 +71,7 @@ class Load:
 
                     self.cur.execute(
                         "INSERT INTO umsaetze (institut, typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfaenger, betrag, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                        "INSERT INTO umsaetze (institut, typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfaenger, betrag, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                        (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger,
-                         betrag, saldo))
+                        (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger, betrag, saldo))
                     print(
                         "Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, wertstellungstag))
                 except Exception as e:
