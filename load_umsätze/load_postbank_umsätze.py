@@ -19,7 +19,7 @@ class Load:
     def load_data(self):
         # Alle PB_* Dateien lesen, komplett önnen und in das Schema
         for file in glob.glob("input/PB_*"):
-            fin = open(file)
+            fin = open(file, encoding="utf-8")
             umsätze = fin.readlines()
 
             kontostand_array = []
@@ -47,16 +47,14 @@ class Load:
                 print(str(e))
                 raise(e)
 
-            for zeile in umsätze[9:]:
-                # zu utf8 wandeln
-                #zeile.encode('utf-8')
+            for zeile in umsätze[10:]:
                 zeilenliste = zeile.split(";")
 
-                wertstellungstag = zeilenliste[1][1:-1]
-                umsatzart = zeilenliste[2][1:-1]
-                buchungsdetails = zeilenliste[3][1:-1]
-                auftraggeber = zeilenliste[4][1:-1]
-                empfänger = zeilenliste[5][1:-1]
+                wertstellungstag = zeilenliste[1]
+                umsatzart = zeilenliste[2]
+                buchungsdetails = zeilenliste[3]
+                auftraggeber = zeilenliste[4]
+                empfänger = zeilenliste[5]
                 betrag = float(locale.atof(zeilenliste[6][1:-2]))
                 saldo = float(locale.atof(zeilenliste[7][1:-4]))
 
