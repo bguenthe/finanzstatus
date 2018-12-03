@@ -19,7 +19,7 @@ class Load:
     def load_data(self):
         # Alle PB_* Dateien lesen, komplett önnen und in das Schema
         for file in glob.glob("input/PB_*"):
-            fin = open(file, encoding="utf-8")
+            fin = open(file)
             umsätze = fin.readlines()
 
             kontostand_array = []
@@ -48,6 +48,7 @@ class Load:
                 raise(e)
 
             for zeile in umsätze[10:]:
+                zeile.encode('utf-8')
                 zeilenliste = zeile.split(";")
 
                 wertstellungstag = zeilenliste[1]

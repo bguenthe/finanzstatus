@@ -119,7 +119,5 @@ select * from finanzstatus order by datum;
 
 select buchungsdetails, auftraggeber, empfaenger, betrag from umsaetze where to_char(wertstellungstag,'YYYYMM') = '201804' order by wertstellungstag;
 
-select * from umsatz_uebersicht where monat = '201804'
-
 select * from finanzstatus_monthly
 order by monat;

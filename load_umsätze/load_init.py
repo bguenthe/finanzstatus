@@ -28,7 +28,7 @@ class Load:
         self.Postbank_dax_kontostand = float(60.35)
 
         self.Postbank_depot_typ = 'Depot&Anlagekonto'
-        self.Postbank_depot_kontostand = float(1066.29)
+        self.Postbank_depot_kontostand = float(1024.41)
 
     def get_curent_date(self):
         return datetime.today().strftime('%Y.%m.%d')
