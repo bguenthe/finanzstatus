@@ -1,0 +1,11 @@
+"Kontonummer:";"DE02120300001053355689 / Girokonto";
+
+"Von:";"30.05.2019";
+"Bis:";"29.06.2019";
+"Kontostand vom 29.06.2019:";"714,81 EUR";
+
+"Buchungstag";"Wertstellung";"Buchungstext";"Auftraggeber / Begünstigter";"Verwendungszweck";"Kontonummer";"BLZ";"Betrag (EUR)";"Gläubiger-ID";"Mandatsreferenz";"Kundenreferenz";
+"01.07.2019";"01.07.2019";"ONLINE-UEBERWEISUNG";"DKB VISACARD";"4748430032755959 14.42  BERND GUENTHER  DKB INTERNET BANKING                DATUM 29.06.2019, 14.42 UHR";"DE63120300000001999333";"BYLADEM1001";"-2.000,00";"";"";"";
+"01.07.2019";"01.07.2019";"ABSCHLUSS";"";"Abrechnung 28.06.2019      siehe Anlage<br />Abrechnung 28.06.2019<br />Information zur Abrechnung<br />Kontostand am 28.06.2019                                        2.714,81 +<br />Abrechnungszeitraum vom 01.04.2019 bis 30.06.2019<br />Abrechnung 30.06.2019                                                0,00+<br />Sollzinssätze am 30.06.2019<br /> 6,9000 v.H. für eingeräumte Kontoüberziehung<br />(aktuell eingeräumte Kontoüberziehung         500,00)<br /> 6,9000 v.H. für geduldete Kontoüberziehung<br />über die eingeräumte Kontoüberziehung hinaus<br />Kontostand/Rechnungsabschluss am 28.06.2019                     2.714,81 +<br />Rechnungsnummer: 20190701-BY111-00065928550";"1053355689";"12030000";"0,00";"";"";"";
+"04.06.2019";"04.06.2019";"Gutschrift";"Bernd Gunther";"DAUER CRISSCROSS";"DE95200100200305361201";"PBNKDEFFXXX";"700,00";"";"";"ZV0100268662824200000002";
+"03.06.2019";"03.06.2019";"Dauerauftrag";"DKB VISACARD";"4748430032755959 16.21  BERND GUENTHER  DKB INTERNET BANKING";"DE63120300000001999333";"BYLADEM1001";"-700,00";"";"";"NOTPROVIDED";
