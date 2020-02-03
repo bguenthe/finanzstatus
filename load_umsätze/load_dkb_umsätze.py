@@ -1,5 +1,6 @@
 import glob
 import locale
+from datetime import date
 
 locale.setlocale(locale.LC_ALL, '')
 
@@ -24,7 +25,7 @@ class Load:
                 datum_und_kontostand.append(zeile.split(";"))
 
             kontostand = float(datum_und_kontostand[0][1][1:-5])
-            datum = datum_und_kontostand[1][1][1:-1]
+            datum = date.today()
 
             try:
                 self.cur.execute(
@@ -73,3 +74,7 @@ class Load:
                     print(str(e))
 
         self.con.commit()
+
+if __name__ == "__main__":
+    loadDKB = Load()
+    loadDKB.load_data()

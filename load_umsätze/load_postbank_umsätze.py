@@ -4,10 +4,12 @@ from datetime import datetime
 
 import psycopg2
 
+
 class Load:
     def __init__(self):
         locale.setlocale(locale.LC_ALL, '')
-        self.con = psycopg2.connect(host='192.168.178.35', database='finanzstatus', user='finanzstatus', password='%dudelsack48%')
+        self.con = psycopg2.connect(host='192.168.178.35', database='finanzstatus', user='finanzstatus',
+                                    password='%dudelsack48%')
         self.cur = self.con.cursor()
 
         self.institut = "Postbank"
@@ -45,10 +47,15 @@ class Load:
                 print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (datum, kontostand))
             except Exception as e:
                 print(str(e))
-                raise(e)
+                raise (e)
+            num = 0
+            for num, zeile in enumerate(umsätze[0:]):
+                if zeile.find("gebuchte Umsätze;") != -1:
+                    startup = num + 2
+                    break
 
-            for zeile in umsätze[10:]:
-                #zeile.encode('utf-8')
+            for zeile in umsätze[startup:]:
+                # zeile.encode('utf-8')
                 zeilenliste = zeile.split(";")
 
                 wertstellungstag = zeilenliste[1]
@@ -56,13 +63,20 @@ class Load:
                 buchungsdetails = zeilenliste[3]
                 auftraggeber = zeilenliste[4]
                 empfänger = zeilenliste[5]
-                betrag = float(locale.atof(zeilenliste[6][1:-2]))
-                saldo = float(locale.atof(zeilenliste[7][1:-4]))
+                try:
+                    betrag = float(locale.atof(zeilenliste[6][1:-2]))
+                except Exception as e:
+                    f = 1
+                try:
+                    saldo = float(locale.atof(zeilenliste[7][1:-4]))
+                except Exception as e:
+                    f = 1
 
                 try:
                     self.cur.execute(
                         "SELECT * FROM umsaetze WHERE institut=%s AND typ =%s AND wertstellungstag=%s AND umsatzart=%s AND buchungsdetails=%s AND auftraggeber=%s AND empfaenger=%s AND betrag=%s AND saldo=%s",
-                        (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger, betrag, saldo))
+                        (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger,
+                         betrag, saldo))
                     rows = self.cur.fetchall()
                     # Einzeldaten schon verarbeitet skipping...
                     if len(rows) != 0:
@@ -70,11 +84,11 @@ class Load:
 
                     self.cur.execute(
                         "INSERT INTO umsaetze (institut, typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfaenger, betrag, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                        (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger, betrag, saldo))
+                        (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger,
+                         betrag, saldo))
                     print("Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, wertstellungstag))
                 except Exception as e:
                     print(str(e))
-                    raise(e)
+                    raise (e)
 
         self.con.commit()
-

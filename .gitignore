@@ -14,6 +14,7 @@
 .idea
 *.iws
 *.ipr
+*.csv
 
 ### NetBeans ###
 nbproject/private/
@@ -22,3 +23,4 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+

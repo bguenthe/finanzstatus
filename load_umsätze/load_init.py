@@ -28,11 +28,10 @@ class Load:
         self.Postbank_dax_kontostand = float(60.35)
 
         self.Postbank_depot_typ = 'Depot&Anlagekonto'
-        self.Postbank_depot_kontostand = float(1092.01)
+        self.Postbank_depot_kontostand = float(1136.82)
 
     def get_curent_date(self):
         return datetime.today().strftime('%Y.%m.%d')
-
 
     def load_data(self):
         strdatum = datetime.today().strftime('%Y%m')
@@ -55,16 +54,20 @@ class Load:
         try:
             self.cur.execute(
                 "SELECT * FROM finanzstatus WHERE institut=%s AND typ =%s AND kontostand=%s AND to_char(datum,'YYYYMM')=%s ",
-                (self.Postbank_institut, self.Postbank_sparcard_plus_typ, self.Postbank_sparcard_plus_kontostand, strdatum))
+                (self.Postbank_institut, self.Postbank_sparcard_plus_typ, self.Postbank_sparcard_plus_kontostand,
+                 strdatum))
             rows = self.cur.fetchall()
             # dublikate überlesen
             if len(rows) == 0:
                 self.cur.execute(
                     "INSERT INTO finanzstatus (institut, typ, datum, kontostand) VALUES (%s, %s, %s, %s)",
-                    (self.Postbank_institut, self.Postbank_sparcard_plus_typ, self.datum, self.Postbank_sparcard_plus_kontostand))
-                print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (self.datum, self.Postbank_sparcard_plus_kontostand))
+                    (self.Postbank_institut, self.Postbank_sparcard_plus_typ, self.datum,
+                     self.Postbank_sparcard_plus_kontostand))
+                print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (
+                self.datum, self.Postbank_sparcard_plus_kontostand))
             else:
-                print("Kontodaten für %s, %s sind Up to date" % (self.Postbank_institut, self.Postbank_sparcard_plus_typ))
+                print(
+                    "Kontodaten für %s, %s sind Up to date" % (self.Postbank_institut, self.Postbank_sparcard_plus_typ))
         except Exception as e:
             print(str(e))
 
@@ -78,12 +81,13 @@ class Load:
                 self.cur.execute(
                     "INSERT INTO finanzstatus (institut, typ, datum, kontostand) VALUES (%s, %s, %s, %s)",
                     (self.Postbank_institut, self.Postbank_sparcard_typ, self.datum, self.Postbank_sparcard_kontostand))
-                print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (self.datum, self.Postbank_sparcard_plus_kontostand))
+                print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (
+                self.datum, self.Postbank_sparcard_plus_kontostand))
             else:
-                print("Kontodaten für %s, %s sind Up to date" % (self.Postbank_institut, self.Postbank_sparcard_plus_typ))
+                print(
+                    "Kontodaten für %s, %s sind Up to date" % (self.Postbank_institut, self.Postbank_sparcard_plus_typ))
         except Exception as e:
             print(str(e))
-
 
         try:
             self.cur.execute(
