@@ -1,5 +1,8 @@
 import glob
 import locale
+import os
+import shutil
+from datetime import date
 
 locale.setlocale(locale.LC_ALL, '')
 
@@ -36,15 +39,15 @@ class Load:
                 # dublikate überlesen
                 if len(rows) != 0:
                     print("Kontodaten für %s, %s sind Up to date" % (self.institut, self.typ))
-                    continue
-
-                self.cur.execute(
-                    "INSERT INTO finanzstatus (institut, typ, datum, kontostand) VALUES (%s, %s, %s, %s)",
-                    (self.institut, self.typ, datum, kontostand))
-                print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (datum, kontostand))
+                else:
+                    self.cur.execute(
+                        "INSERT INTO finanzstatus (institut, typ, datum, kontostand) VALUES (%s, %s, %s, %s)",
+                        (self.institut, self.typ, datum, kontostand))
+                    print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (datum, kontostand))
             except Exception as e:
                 print(str(e))
                 raise(e)
+            fin.close()
 
             for zeile in umsätze[7:]:
                 # zu utf8 wandeln
@@ -67,17 +70,16 @@ class Load:
                     rows = self.cur.fetchall()
                     # dublikate überlesen
                     if len(rows) != 0:
-                        continue
-
-                    self.cur.execute(
-                        "INSERT INTO umsaetze (institut, typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfaenger, betrag, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                        (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger, betrag, saldo))
-                    print(
-                        "Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, wertstellungstag))
+                        print("Umsätze: Institur %s, Wertstellungstag %s überlesen (Duplikat)" % (self.institut, wertstellungstag))
+                    else:
+                        self.cur.execute(
+                            "INSERT INTO umsaetze (institut, typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfaenger, betrag, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                            (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger, betrag, saldo))
+                        print("Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, wertstellungstag))
                 except Exception as e:
                     print(str(e))
                     raise(e)
-
+            shutil.move(file, "input/processed/" + file.split("\\")[1] + "_" + str(date.today()))
         self.con.commit()
 
 

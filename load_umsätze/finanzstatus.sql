@@ -115,9 +115,11 @@ create or replace VIEW finanzstatus_monthly as (
 
 drop VIEW finanzstatus_monthly;
 
-select * from finanzstatus order by datum;
+select * from finanzstatus order by datum desc;
 
 select buchungsdetails, auftraggeber, empfaenger, betrag from umsaetze where to_char(wertstellungstag,'YYYYMM') = '201804' order by wertstellungstag;
 
 select * from finanzstatus_monthly
-order by monat;
+order by monat desc;
+
+select * from umsaetze order by wertstellungstag desc;

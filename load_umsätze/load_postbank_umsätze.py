@@ -1,6 +1,7 @@
 import glob
 import locale
-from datetime import datetime
+import shutil
+from datetime import datetime, date
 
 import psycopg2
 
@@ -39,22 +40,24 @@ class Load:
                 # Datei schon verarbeitet skipping...
                 if len(rows) != 0:
                     print("Kontodaten für %s, %s sind Up to date" % (self.institut, self.typ))
-                    continue
-
-                self.cur.execute(
-                    "INSERT INTO finanzstatus (institut, typ, datum, kontostand) VALUES (%s, %s, %s, %s)",
-                    (self.institut, self.typ, datum, kontostand))
-                print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (datum, kontostand))
+                else:
+                    self.cur.execute(
+                        "INSERT INTO finanzstatus (institut, typ, datum, kontostand) VALUES (%s, %s, %s, %s)",
+                        (self.institut, self.typ, datum, kontostand))
+                    print("Kontodaten Datum: %s, Kontostand %s eingefügt" % (datum, kontostand))
             except Exception as e:
                 print(str(e))
                 raise (e)
+
+            fin.close()
+
             num = 0
             for num, zeile in enumerate(umsätze[0:]):
                 if zeile.find("gebuchte Umsätze;") != -1:
-                    startup = num + 2
+                    self.startup = num + 2
                     break
 
-            for zeile in umsätze[startup:]:
+            for zeile in umsätze[self.startup:]:
                 # zeile.encode('utf-8')
                 zeilenliste = zeile.split(";")
 
@@ -63,12 +66,14 @@ class Load:
                 buchungsdetails = zeilenliste[3]
                 auftraggeber = zeilenliste[4]
                 empfänger = zeilenliste[5]
+                betrag = 0
+                saldo = 0
                 try:
-                    betrag = float(locale.atof(zeilenliste[6][1:-2]))
+                    betrag = float(locale.atof(zeilenliste[6][0:-2]))
                 except Exception as e:
                     f = 1
                 try:
-                    saldo = float(locale.atof(zeilenliste[7][1:-4]))
+                    saldo = float(locale.atof(zeilenliste[7][0:-4]))
                 except Exception as e:
                     f = 1
 
@@ -80,15 +85,15 @@ class Load:
                     rows = self.cur.fetchall()
                     # Einzeldaten schon verarbeitet skipping...
                     if len(rows) != 0:
-                        continue
-
-                    self.cur.execute(
-                        "INSERT INTO umsaetze (institut, typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfaenger, betrag, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                        (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger,
-                         betrag, saldo))
-                    print("Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, wertstellungstag))
+                        print("Umsätze: Institur %s, Wertstellungstag %s überlesen (Duplikat)" % (self.institut, wertstellungstag))
+                    else:
+                        self.cur.execute(
+                            "INSERT INTO umsaetze (institut, typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfaenger, betrag, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                            (self.institut, self.typ, wertstellungstag, umsatzart, buchungsdetails, auftraggeber, empfänger,
+                             betrag, saldo))
+                        print("Umsätze: Institur %s, Wertstellungstag %s eingefügt" % (self.institut, wertstellungstag))
                 except Exception as e:
                     print(str(e))
                     raise (e)
-
+            shutil.move(file, "input/processed/" + file.split("\\")[1] + "_" + str(date.today()))
         self.con.commit()
